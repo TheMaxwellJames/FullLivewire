@@ -1,3 +1,5 @@
+<div>
+
 <div class="card offset-3 col-6">
 
     <div class="card-header">
@@ -21,5 +23,10 @@
         <button class="btn btn-secondary" wire:click="decrease">Decrementing</button>
 
     </div>
+
+</div>
+
+<livewire:create-user/>
+
 
 </div>
