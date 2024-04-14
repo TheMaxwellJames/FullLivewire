@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Livewire;
-
+//use Livewire\Attributes\Title;
+// use Livewire\Attributes\Layout;
 use Livewire\Component;
 
 class Counter extends Component
@@ -9,9 +10,17 @@ class Counter extends Component
 
     public $count = 0;
     public $limit = 5;
+
+   // #[Title('Counter Page')]
+//    #[Layout('components.layouts.app')]
     public function render()
     {
-        return view('livewire.counter');
+        return view('livewire.counter')->layoutData([
+            'metaKeys'=> 'Key1, key2, Key3',
+            'MetaDescription'=>'Some Description',
+            'metaAuthor'=>'James Maxwell',
+            'title'=>'Awesome Count'
+        ])->layout('components.layouts.app');
     }
 
     public function increase()
