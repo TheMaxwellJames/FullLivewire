@@ -15,12 +15,13 @@ class Counter extends Component
 //    #[Layout('components.layouts.app')]
     public function render()
     {
-        return view('livewire.counter')->layoutData([
-            'metaKeys'=> 'Key1, key2, Key3',
-            'MetaDescription'=>'Some Description',
-            'metaAuthor'=>'James Maxwell',
-            'title'=>'Awesome Count'
-        ])->layout('components.layouts.app');
+        return view('livewire.counter');
+        // ->layoutData([
+        //     'MetaKeys'=> 'Key1, key2, Key3',
+        //     'MetaDescription'=>'Some Description',
+        //     'MetaAuthor'=>'James Maxwell',
+        //     'title'=>'Awesome Count'
+        // ])->layout('components.layouts.app')
     }
 
     public function increase()
