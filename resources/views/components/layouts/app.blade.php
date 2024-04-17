@@ -15,7 +15,7 @@
         <title>{{ $title ?? 'Page Title' }}</title>
     </head>
     <body>
-        <livewire:nav-bar/>
+        <livewire:nav-bar lazy="true"/>
         <div class="container">
 
 
