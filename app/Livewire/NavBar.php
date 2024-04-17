@@ -8,7 +8,7 @@ use Livewire\Attributes\Lazy;
 class NavBar extends Component
 {
 
-    #[Lazy]
+   // #[Lazy]
     public function placeholder()
     {
         return <<<'HTML'
@@ -26,7 +26,7 @@ class NavBar extends Component
     }
     public function render()
     {
-        sleep(5);
+        //sleep(5);
         return view('livewire.nav-bar');
     }
 }

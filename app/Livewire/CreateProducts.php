@@ -4,10 +4,15 @@ namespace App\Livewire;
 
 use App\Models\Product;
 use Livewire\Component;
+use Livewire\Attributes\On;
 use Livewire\Attributes\Rule;
 
 class CreateProducts extends Component
 {
+    public $product;
+    public $formtitle='Create Product';
+    public $editform=false;
+
     #[Rule('required')]
 
     #[Rule('required')]
@@ -36,4 +41,32 @@ class CreateProducts extends Component
     {
         $this->reset();
     }
+
+
+    #[On('edit-mode')]
+    public function edit($id)
+    {
+        // dd($id);
+        $this->editform=true;
+        $this->formtitle='Edit Product';
+        $this->product=Product::findOrFail($id);
+        $this->title=$this->product->title;
+        $this->description=$this->product->description;
+        $this->price=$this->product->price;
+
+
+    }
+
+    public function update()
+    {
+        $validated=$this->validate();
+        $p=Product::findOrFail($this->product->id);
+        $p->update($validated);
+        session()->flash('status', 'Product Updated');
+    }
+
+
+   
+
+
 }

@@ -21,6 +21,10 @@
           <li class="nav-item">
             <a wire:navigate class="{{request()->is('upload')?'nav-link active':'nav-link'}}" href="/upload">Upload</a>
           </li>
+
+          <li class="nav-item">
+            <a wire:navigate class="{{request()->is('products')?'nav-link active':'nav-link'}}" href="/products">Products</a>
+          </li>
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
