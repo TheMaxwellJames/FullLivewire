@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\AllProducts;
 use App\Livewire\AllUsers;
 use App\Livewire\Counter;
 use App\Livewire\DropDown;
@@ -16,3 +17,4 @@ Route::get('/register', RegisterUser::class);
 Route::get('/dropdown', DropDown::class);
 Route::get('upload', FileUpload::class);
 Route::get('users', AllUsers::class);
+Route::get('products', AllProducts::class);
