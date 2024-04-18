@@ -38,6 +38,7 @@ class CreateProducts extends Component
     }
 
 
+    #[On('reset-modal')]
     public function close()
     {
         $this->reset();

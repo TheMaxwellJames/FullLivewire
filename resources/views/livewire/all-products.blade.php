@@ -30,7 +30,7 @@
 
 
 
-              
+
 
 
             </td>
@@ -41,3 +41,18 @@
 
       <livewire:create-products/>
 </div>
+
+<script>
+    document.addEventListener('livewire:initialized',()=>{
+        @this.on('refresh-products',(event)=>{
+           // alert('Product created/updated')
+           var myModalEl=document.querySelector('#exampleModal')
+           var modal=bootstrap.Modal.getOrCreateInstance(myModalEl)
+
+           setTimeout(() => {
+            modal.hide();
+            @this.dispatch('reset-modal');
+           }, 1000);
+        })
+    })
+</script>
