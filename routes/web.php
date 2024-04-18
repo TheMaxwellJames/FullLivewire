@@ -2,6 +2,7 @@
 
 use App\Livewire\AllProducts;
 use App\Livewire\AllUsers;
+use App\Livewire\Calculator;
 use App\Livewire\Counter;
 use App\Livewire\DropDown;
 use App\Livewire\FileUpload;
@@ -22,3 +23,4 @@ Route::get('users', AllUsers::class);
 Route::get('products', AllProducts::class);
 Route::get('poll', Polling::class);
 Route::get('loading', LoadingState::class);
+Route::get('calc', Calculator::class);
