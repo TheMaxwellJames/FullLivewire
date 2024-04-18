@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Models\Product;
 use Livewire\Component;
+use Livewire\Attributes\On;
 
 class AllProducts extends Component
 {
@@ -19,6 +20,11 @@ class AllProducts extends Component
     }
 
 
+    #[On('refresh-products')]
+    public function refreshProducts()
+    {
+        $this->products=Product::all();
+    }
 
 
 }

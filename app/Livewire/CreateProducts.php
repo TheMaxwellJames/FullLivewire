@@ -32,6 +32,7 @@ class CreateProducts extends Component
     {
         $validatedData = $this->validate();
         Product::create($validatedData);
+        $this->dispatch('refresh-products');
         session()->flash('status', 'product created');
         $this->reset();
     }
@@ -62,11 +63,12 @@ class CreateProducts extends Component
         $validated=$this->validate();
         $p=Product::findOrFail($this->product->id);
         $p->update($validated);
+        $this->dispatch('refresh-products');
         session()->flash('status', 'Product Updated');
     }
 
 
-   
+
 
 
 }
