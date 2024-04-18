@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\AllPost;
 use App\Livewire\AllProducts;
 use App\Livewire\AllUsers;
 use App\Livewire\Calculator;
@@ -24,3 +25,4 @@ Route::get('products', AllProducts::class);
 Route::get('poll', Polling::class);
 Route::get('loading', LoadingState::class);
 Route::get('calc', Calculator::class);
+Route::get('post', AllPost::class);
