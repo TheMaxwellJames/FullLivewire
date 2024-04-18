@@ -30,7 +30,7 @@
 
 
 
-                {{-- <button onclick="confirmDelete({{ $product->id }})" class="btn btn-danger">Delete</button> --}}
+              
 
 
             </td>

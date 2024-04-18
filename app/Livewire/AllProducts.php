@@ -19,12 +19,6 @@ class AllProducts extends Component
     }
 
 
-    // public function deleteProduct($productId)
-    // {
-    //     $product = Product::findOrFail($productId);
-    //     $product->delete();
-    //     // You may also add a message or emit an event here to notify the user
-    // }
 
 
 }

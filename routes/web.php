@@ -5,6 +5,7 @@ use App\Livewire\AllUsers;
 use App\Livewire\Counter;
 use App\Livewire\DropDown;
 use App\Livewire\FileUpload;
+use App\Livewire\Polling;
 use App\Livewire\RegisterUser;
 use Illuminate\Support\Facades\Route;
 
@@ -18,3 +19,4 @@ Route::get('/dropdown', DropDown::class);
 Route::get('upload', FileUpload::class);
 Route::get('users', AllUsers::class);
 Route::get('products', AllProducts::class);
+Route::get('poll', Polling::class);
